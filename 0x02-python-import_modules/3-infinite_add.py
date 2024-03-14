@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     argv = sys.argv
     arg = len(argv) - 1
-    
+
     sum = 0
 
     if arg == 0:
