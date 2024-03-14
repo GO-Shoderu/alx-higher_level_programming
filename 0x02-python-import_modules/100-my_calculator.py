@@ -17,7 +17,7 @@ if __name__ == "__main__":
     y = argv[2]
     z = argv[3]
 
-    if y not in operatorss:
+    if y not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     else:
