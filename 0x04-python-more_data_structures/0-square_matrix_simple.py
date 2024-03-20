@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-quare_matrix_simple(matrix=[]):
+def square_matrix_simple(matrix=[]):
     if len(matrix) == 0 or matrix is None:
         return (None)
 
