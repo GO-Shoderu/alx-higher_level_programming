@@ -1,15 +1,18 @@
-#!/usr/bin/env node
-const args = process.argv.slice(2);
-if (args.length < 2) {
-    console.log(0);
+#!/usr/bin/node
+const arg = process.argv;
+if (arg.length <= 3) {
+  console.log(0);
 } else {
-    const numbers = args.map(Number);
-    const max = Math.max(...numbers);
-    const filteredNumbers = numbers.filter(num => num !== max);
-    if (filteredNumbers.length === 0) {
-        console.log(0);
-    } else {
-        const secondMax = Math.max(...filteredNumbers);
-        console.log(secondMax);
+  const arr = arg.slice(2);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = Math.floor(Number(arr[i]));
+  }
+  const max = Math.max(...arr);
+  let maxa = -100;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > maxa && arr[i] < max) {
+      maxa = arr[i];
     }
+  }
+  console.log(maxa);
 }
